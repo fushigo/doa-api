@@ -1,0 +1,42 @@
+GET http://localhost:3001/api/users/get-user
+
+###
+POST http://localhost:3001/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "dimas",
+    "password": "dimas"
+}
+
+###
+
+GET http://localhost:3001/api/doa/get-doa
+
+###
+
+POST http://localhost:3001/api/doa/add-doa
+Content-Type: application/json
+
+{
+    "judul": "Doa sebelum tidur",
+    "deskripsi": "Berdoa sebelum tidur supaya tidak ketindihan",
+    "ayat": "بِسْمِكَ اللّهُمَّ اَحْيَا وَ بِسْمِكَ اَمُوْتُ",
+    "latin": "Bismika allahumma ahyaa wa bismika amuut"
+}
+
+###
+
+PUT http://localhost:3001/api/doa/update-doa?id=2
+Content-Type: application/json
+
+{
+    "judul": "Doa sebelum tidur",
+    "deskripsi": "Berdoa sebelum tidur supaya mimpi indah",
+    "ayat": "بِسْمِكَ اللّهُمَّ اَحْيَا وَ بِسْمِكَ اَمُوْتُ",
+    "latin": "Bismika allahumma ahyaa wa bismika amuut"
+}
+
+###
+
+DELETE http://localhost:3001/api/doa/delete-doa?id=1
